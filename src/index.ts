@@ -11,6 +11,7 @@ import * as yargs from "yargs";
 import * as piping from "./piping";
 import {VERSION} from "./version";
 
+const port = process.env.PORT || 8080;
 // Create option parser
 const parser = yargs
   .option("host", {
@@ -20,7 +21,7 @@ const parser = yargs
   })
   .option("http-port", {
     describe: "Port of HTTP server",
-    default: 10000,
+    default: port,
   })
   .option("enable-https", {
     describe: "Enable HTTPS",
