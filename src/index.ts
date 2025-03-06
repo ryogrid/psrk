@@ -16,10 +16,11 @@ const parser = yargs
   .option("host", {
     describe: "Bind address (e.g. 127.0.0.1, ::1)",
     type: "string",
+    default: "0.0.0.0",
   })
   .option("http-port", {
     describe: "Port of HTTP server",
-    default: 8080
+    default: 10000,
   })
   .option("enable-https", {
     describe: "Enable HTTPS",
